@@ -1,0 +1,22 @@
+# Vivado junk
+*.jou
+*.log
+*.str
+.Xil/
+*.os/
+
+# Project outputs
+obj/
+*.bit
+*.bin
+*.gen/
+*.runs/
+*.results/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+
+#Additional
+*.py
+*.m
