@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 30.04.2026 11:01:14
+// Create Date: 02.05.2026 13:56:21
 // Design Name: 
 // Module Name: rgb2ycbcr
 // Project Name: 
@@ -81,13 +81,13 @@ assign cr_g = P32[25:17];
 assign cr_b = P33[25:17];
 
 wire signed [8:0]term_y_rg;
-wire signed [8:0]term_y_rgb;
+wire signed [8:0]term_y_b0;
 wire signed [8:0]Y;
 wire signed [8:0]term_cb_rg;
-wire signed [8:0]term_cb_rgb;
+wire signed [8:0]term_cb_b128;
 wire signed [8:0]Cb;
 wire signed [8:0]term_cr_rg;
-wire signed [8:0]term_cr_rgb;
+wire signed [8:0]term_cr_b128;
 wire signed [8:0]Cr;
 
 reg [8:0]b1 = 9'b0;
@@ -164,15 +164,15 @@ c_addsub_0 add_y1(
 );
 
 c_addsub_0 add_y2(
-    .A(term_y_rg),
-    .B(y_b),
+    .A(y_b),
+    .B(b1),
     .CLK(clk),
-    .S(term_y_rgb)
+    .S(term_y_b0)
 );
 
 c_addsub_0 add_y3(
-    .A(term_y_rgb),
-    .B(b1),
+    .A(term_y_rg),
+    .B(term_y_b0),
     .CLK(clk),
     .S(Y)
 );
@@ -185,15 +185,15 @@ c_addsub_0 add_cb1(
 );
 
 c_addsub_0 add_cb2(
-    .A(term_cb_rg),
-    .B(cb_b),
+    .A(cb_b),
+    .B(b23),
     .CLK(clk),
-    .S(term_cb_rgb)
+    .S(term_cb_b128)
 );
 
 c_addsub_0 add_cb3(
-    .A(term_cb_rgb),
-    .B(b23),
+    .A(term_cb_rg),
+    .B(term_cb_b128),
     .CLK(clk),
     .S(Cb)
 );
@@ -206,15 +206,15 @@ c_addsub_0 add_cr1(
 );
 
 c_addsub_0 add_cr2(
-    .A(term_cr_rg),
-    .B(cr_b),
+    .A(cr_b),
+    .B(b23),
     .CLK(clk),
-    .S(term_cr_rgb)
+    .S(term_cr_b128)
 );
 
 c_addsub_0 add_cr3(
-    .A(term_cr_rgb),
-    .B(b23),
+    .A(term_cr_rg),
+    .B(term_cr_b128),
     .CLK(clk),
     .S(Cr)
 );
@@ -222,7 +222,7 @@ c_addsub_0 add_cr3(
 delay_line
 #(
     .N(3),
-    .DELAY(6)
+    .DELAY(5)
 )
 delay_sync
 (
