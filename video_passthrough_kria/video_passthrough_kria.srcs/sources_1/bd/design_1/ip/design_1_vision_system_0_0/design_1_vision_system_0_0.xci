@@ -8,7 +8,15 @@
     "gen_directory": "../../../../../../video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_vision_system_0_0",
     "parameters": {
       "component_parameters": {
+        "IMG_W": [ { "value": "1920", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "IMG_H": [ { "value": "1080", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "H_SIZE": [ { "value": "2200", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "design_1_vision_system_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "IMG_W": [ { "value": "1920", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "IMG_H": [ { "value": "1080", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "H_SIZE": [ { "value": "2200", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynquplus" } ],
@@ -43,6 +51,7 @@
         "hsync_in": [ { "direction": "in" } ],
         "vsync_in": [ { "direction": "in" } ],
         "pixel_in": [ { "direction": "in", "size_left": "23", "size_right": "0" } ],
+        "sw": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
         "de_out": [ { "direction": "out" } ],
         "hsync_out": [ { "direction": "out" } ],
         "vsync_out": [ { "direction": "out" } ],

@@ -40,6 +40,8 @@ wire [7:0] tx_red;
 wire [7:0] tx_green;
 wire [7:0] tx_blue;
 
+reg [3:0]sw = 4'd11;
+
 // --------------------------------------
 // HDMI input
 // --------------------------------------
@@ -63,12 +65,17 @@ hdmi_in file_input (
 //assign tx_green = rx_green;
 //assign tx_blue = rx_blue;
 
-vision_system binarization (
+vision_system # (
+    .IMG_W(64),
+    .IMG_H(64),
+    .H_SIZE(83)
+) multiplexer (
     .clk(rx_pclk),
     .de_in(rx_de),
     .hsync_in(rx_hsync),
     .vsync_in(rx_vsync),
     .pixel_in({rx_red, rx_green, rx_blue}),
+    .sw(sw),
     .de_out(tx_de),
     .hsync_out(tx_hsync),
     .vsync_out(tx_vsync),

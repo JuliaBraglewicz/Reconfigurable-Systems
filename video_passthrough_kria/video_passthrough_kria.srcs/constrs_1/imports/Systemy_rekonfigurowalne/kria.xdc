@@ -15,14 +15,14 @@ set_property PACKAGE_PIN D7 [get_ports mipi_phy_if_0_clk_p]
 set_property PACKAGE_PIN D6 [get_ports mipi_phy_if_0_clk_n]
 
 #switches
-#set_property PACKAGE_PIN H12 [get_ports {sw[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
-#set_property PACKAGE_PIN E10 [get_ports {sw[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
-#set_property PACKAGE_PIN D10 [get_ports {sw[2]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {sw[2]}]
-#set_property PACKAGE_PIN C11 [get_ports {sw[3]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}]
+set_property PACKAGE_PIN H12 [get_ports {sw[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
+set_property PACKAGE_PIN E10 [get_ports {sw[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
+set_property PACKAGE_PIN D10 [get_ports {sw[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[2]}]
+set_property PACKAGE_PIN C11 [get_ports {sw[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}]
 
 #leds
 #set_property PACKAGE_PIN B10 [get_ports {led[0]}]

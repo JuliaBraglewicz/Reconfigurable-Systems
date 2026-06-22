@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="19,999,995 ps"></ZoomStartTime>
-      <ZoomEndTime time="20,000,002 ps"></ZoomEndTime>
-      <Cursor1Time time="20,000,000 ps"></Cursor1Time>
+      <ZoomStartTime time="169.166226 us"></ZoomStartTime>
+      <ZoomEndTime time="183.366755 us"></ZoomEndTime>
+      <Cursor1Time time="181.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="81"></NameColumnWidth>
+      <NameColumnWidth column_width="155"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/tb_hdmi/rx_pclk" type="logic">
       <obj_property name="ElementShortName">rx_pclk</obj_property>
       <obj_property name="ObjectShortName">rx_pclk</obj_property>
@@ -71,5 +71,9 @@
    <wvobject fp_name="/tb_hdmi/tx_blue" type="array">
       <obj_property name="ElementShortName">tx_blue[7:0]</obj_property>
       <obj_property name="ObjectShortName">tx_blue[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hdmi/sw" type="array">
+      <obj_property name="ElementShortName">sw[3:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[3:0]</obj_property>
    </wvobject>
 </wave_config>

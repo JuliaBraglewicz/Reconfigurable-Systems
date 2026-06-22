@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEAC7FCF9986796EF",
+      "boundary_crc": "0xCFA146E3BC824B21",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../video_passthrough_kria.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -121,6 +121,11 @@
             "value_src": "default"
           }
         }
+      },
+      "sw": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -5245,6 +5250,11 @@
             "left": "23",
             "right": "0"
           },
+          "sw": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
           "de_out": {
             "direction": "O"
           },
@@ -5317,6 +5327,12 @@
         "ports": [
           "preprocess_0/video_out",
           "vision_system_0/pixel_in"
+        ]
+      },
+      "sw_1": {
+        "ports": [
+          "sw",
+          "vision_system_0/sw"
         ]
       },
       "vision_system_0_de_out": {
